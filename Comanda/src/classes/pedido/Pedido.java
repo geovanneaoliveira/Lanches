@@ -10,7 +10,13 @@ public class Pedido {
     }
 
     public double calcularValorTotal() {
-        return 0;
+        double valTotal = 0;
+        for(int i =0; i<10; i++){
+            if(this.lanches[i]!=null){
+                valTotal += this.lanches[i].getValor();
+            }
+        }
+        return valTotal;
     }
     public void adicionarLanche(Lanche lanche) {
         for (int i = 0; i < 10; i++) {
